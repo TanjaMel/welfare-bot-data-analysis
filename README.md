@@ -26,21 +26,38 @@ Jupyter Notebook
 
 In the first notebook I explored the structure of the dataset and analyzed:
 
-* missing values
-* wellbeing score distributions
-* trends over time
-* user wellbeing changes
-* relationships between wellbeing metrics
+- missing values
+- wellbeing score distributions
+- trends over time
+- user wellbeing changes
+- relationships between wellbeing metrics
 
 I also created visualizations to better understand how wellbeing changes over time.
 
 Examples:
 
-* daily wellbeing trend
-* moving averages
-* user wellbeing comparison
-* multi-line wellbeing metric visualization
+- daily wellbeing trend
+- moving averages
+- user wellbeing comparison
+- multi-line wellbeing metric visualization
 
+## Correlation Analysis
+
+As part of the exploratory data analysis, I created a correlation heatmap to better understand the relationships between different wellbeing metrics.
+
+The visualization helped identify which factors had the strongest connection to the user's overall wellbeing score.
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+Main observations:
+- sleep_score showed a strong positive correlation with overall_score
+- hydration_score also had a strong relationship with overall wellbeing
+- mood_score and social_score were moderately connected
+- medication_score had a weak correlation compared to other metrics
+
+This analysis helped demonstrate that overall wellbeing is strongly connected to basic daily needs such as sleep, hydration, nutrition, and social activity.
+
+The heatmap was created using Pandas correlation analysis and visualized with Matplotlib.
 
 # 2. Data Preprocessing
 
@@ -48,9 +65,9 @@ Before machine learning, the data needed preprocessing.
 
 In this phase I:
 
-* handled missing values
-* selected features for machine learning
-* scaled the data using StandardScaler
+- handled missing values
+- selected features for machine learning
+- scaled the data using StandardScaler
 
 Median values were used to fill missing numeric values because median is less sensitive to outliers than mean.
 
@@ -62,18 +79,18 @@ The model tries to identify observations that differ significantly from normal w
 
 The analysis focused on:
 
-* low overall wellbeing
-* sleep issues
-* low hydration
-* reduced food intake
-* lower social activity
+- low overall wellbeing
+- sleep issues
+- low hydration
+- reduced food intake
+- lower social activity
 
 Visualizations included:
 
-* anomaly timeline
-* anomaly count by user
-* scatterplots comparing wellbeing metrics
-* overall score with anomaly markers
+- anomaly timeline
+- anomaly count by user
+- scatterplots comparing wellbeing metrics
+- overall score with anomaly markers
 
 This helped show how machine learning can support early detection of possible risk situations.
 
