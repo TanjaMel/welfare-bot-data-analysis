@@ -1,103 +1,165 @@
 # Welfare Bot Data Analysis
 
-This project is a small data analysis and machine learning case study based on the Welfare Bot concept.
+This is a student data analysis and machine learning project where I analysed simulated wellbeing data using Python and machine learning methods.
 
-The idea behind Welfare Bot is to support elderly wellbeing by monitoring daily wellness indicators such as mood, sleep, food intake, hydration, medication and social activity. The goal is to notice possible changes in wellbeing early and help identify situations where additional support may be needed.
+# Project Goal
 
-I created this project as part of my studies in data processing and machine learning. I wanted to practice the full workflow of a small data analytics project:
+The goal of the project was to explore whether changes in a person’s wellbeing could be identified using data analysis and machine learning.
 
-- data exploration
-- preprocessing
-- visualization
-- anomaly detection
+In the project I analysed wellbeing indicators such as:
 
-The project uses simulated wellbeing data collected over time from multiple users.
+* mood
+* sleep
+* food intake
+* hydration
+* medication
+* social activity
+* overall wellbeing
 
-# Technologies
+The purpose was not medical diagnosis. The goal was to understand how wellbeing data could help identify possible wellbeing changes, trends, and unusual situations.
 
-Python
-Pandas
-NumPy
-Matplotlib
-Scikit-learn
-Jupyter Notebook
+
+# Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-learn
+* Jupyter Notebook
+
 
 # 1. Exploratory Data Analysis (EDA)
 
-In the first notebook I explored the structure of the dataset and analyzed:
+In the EDA phase I explored and visualized the wellbeing dataset.
 
-- missing values
-- wellbeing score distributions
-- trends over time
-- user wellbeing changes
-- relationships between wellbeing metrics
+Main tasks:
 
-I also created visualizations to better understand how wellbeing changes over time.
-
-Examples:
-
-- daily wellbeing trend
-- moving averages
-- user wellbeing comparison
-- multi-line wellbeing metric visualization
-
-## Correlation Analysis
-
-As part of the exploratory data analysis, I created a correlation heatmap to better understand the relationships between different wellbeing metrics.
-
-The visualization helped identify which factors had the strongest connection to the user's overall wellbeing score.
-
-![Correlation Heatmap](images/correlation_heatmap.png)
-
-Main observations:
-- sleep_score showed a strong positive correlation with overall_score
-- hydration_score also had a strong relationship with overall wellbeing
-- mood_score and social_score were moderately connected
-- medication_score had a weak correlation compared to other metrics
-
-This analysis helped demonstrate that overall wellbeing is strongly connected to basic daily needs such as sleep, hydration, nutrition, and social activity.
-
-The heatmap was created using Pandas correlation analysis and visualized with Matplotlib.
-
-# 2. Data Preprocessing
-
-Before machine learning, the data needed preprocessing.
-
-In this phase I:
-
-- handled missing values
-- selected features for machine learning
-- scaled the data using StandardScaler
-
-Median values were used to fill missing numeric values because median is less sensitive to outliers than mean.
-
-# 3. Isolation Forest - Anomaly Detection
-
-In this notebook I used the Isolation Forest algorithm to detect anomalous wellbeing situations.
-
-The model tries to identify observations that differ significantly from normal wellbeing behavior.
-
-The analysis focused on:
-
-- low overall wellbeing
-- sleep issues
-- low hydration
-- reduced food intake
-- lower social activity
+* loading and inspecting data
+* checking missing values
+* analysing correlations
+* visualizing wellbeing trends
+* comparing wellbeing metrics
 
 Visualizations included:
 
-- anomaly timeline
-- anomaly count by user
-- scatterplots comparing wellbeing metrics
-- overall score with anomaly markers
+* correlation heatmap
+* wellbeing trend graphs
+* risk level distribution
+* user wellbeing comparisons
 
-This helped show how machine learning can support early detection of possible risk situations.
+# 2. Data Preprocessing
 
-# 4. in progress 
+Before machine learning analysis, I cleaned and prepared the dataset.
 
-# Notes
+Preprocessing included:
 
-The dataset used in this project is simulated and created for learning purposes.
+* handling missing values
+* feature selection
+* scaling numerical values using StandardScaler
 
-The project is inspired by the broader Welfare Bot idea, where AI and data analysis could help monitor wellbeing changes over time.
+
+# 3. Isolation Forest – Anomaly Detection
+
+I used Isolation Forest to identify unusual wellbeing situations from the dataset.
+
+The model helped detect possible anomalies related to:
+
+* low wellbeing
+* poor sleep
+* low hydration
+* low mood
+* changes in social activity
+
+I also tested different contamination values and adjusted the model to get more realistic results.
+
+
+# 4. Linear Regression Analysis
+
+I used linear regression to predict the user’s overall wellbeing (`overall_score`).
+
+The analysis included:
+
+* feature importance analysis
+* predicted vs actual comparison
+* residual analysis
+* social activity vs future wellbeing analysis
+
+The results showed that hydration, sleep, medication, and nutrition were strongly connected to overall wellbeing.
+
+
+# 5. Risk Level Classification
+
+I also tested classification analysis for predicting wellbeing risk levels.
+
+The analysis included:
+
+* classification model
+* confusion matrix visualization
+* model evaluation
+
+# 6. Clustering Analysis
+
+I used KMeans clustering to group users with similar wellbeing patterns.
+
+The clustering analysis helped identify:
+
+* more stable wellbeing groups
+* lower wellbeing groups
+* different behaviour patterns
+
+
+# 7. User Comparison Analysis
+
+In this phase I compared different users using:
+
+* radar charts
+* rolling average wellbeing trends
+* average wellbeing metric analysis
+
+The comparison showed that users had clearly different wellbeing profiles and long-term trends.
+
+
+# Machine Learning Methods Used
+
+The project included both supervised and unsupervised machine learning methods.
+
+Methods used:
+
+* Isolation Forest
+* Linear Regression
+* Risk Level Classification
+* KMeans Clustering
+
+# Ethical Considerations
+
+The project used simulated demo wellbeing data without real personal information.
+
+The goal of the models was not medical diagnosis, but analysing wellbeing changes and possible risk situations.
+
+I also considered that machine learning models can make incorrect predictions, so results should always be interpreted carefully.
+
+
+# Future Ideas
+
+Possible future improvements:
+
+* real-time wellbeing monitoring
+* automatic alerts for risk situations
+* personal wellbeing dashboards
+* long-term wellbeing tracking
+
+---
+
+# What I Learned
+
+During the project I improved my practical skills especially in:
+
+* data analysis
+* preprocessing
+* machine learning
+* data visualization
+* anomaly detection
+* interpreting machine learning results
+
+The project also helped me better understand how machine learning can be used in wellbeing analytics.
